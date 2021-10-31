@@ -1,0 +1,5 @@
+{
+    "name": "scottharwell/OS_NAME-OS_VERSION-ARCH",
+    "description": "This is a base box for OS_NAME OS_VERSION ARCH for Parallels.",
+    "provider": "parallels"
+}

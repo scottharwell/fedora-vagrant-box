@@ -1,0 +1,10 @@
+---
+arch: "aarch64"
+box_version: "1.0.0"
+os_version: "34"
+os_name: "fedora"
+parallels_path: "/Users/scott/Parallels"
+parallels_hd_name: "Fedora Linux-0"
+parallels_os_name: "Fedora Linux"
+delete_box: true
+publish_to_vagrant_cloud: true

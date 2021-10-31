@@ -1,0 +1,7 @@
+metadata.json
+Vagrantfile
+.vagrant
+*.pvm
+*.box
+.DS_Store
+.vscode
