@@ -5,3 +5,4 @@ Vagrantfile
 *.box
 .DS_Store
 .vscode
+*.log

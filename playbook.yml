@@ -1,5 +1,5 @@
 ---
-- name: Create new macOS Vagrant Box
+- name: Create new Fedora Vagrant Box
   hosts: localhost
   vars_files:
     - "playbook_vars.yml"
@@ -60,9 +60,9 @@
           - "{{ playbook_dir }}/metadata.json"
         dest: "{{ playbook_dir }}/{{ parallels_os_name }}.box"
     - name: Add new box locally
-      command: "vagrant box add --name scottharwell/{{ os_name }}-{{ os_version }}-{{ arch }} -c -f --machine-readable --provider parallels '{{ playbook_dir }}/{{ parallels_os_name }}.box'"
+      command: "vagrant box add --name {{ vagrant_account_name }}/{{ os_name }}-{{ os_version }}-{{ arch }} -c -f --machine-readable --provider parallels '{{ playbook_dir }}/{{ parallels_os_name }}.box'"
     - name: Upload box to Vagrant Cloud
-      command: "vagrant cloud publish scottharwell/{{ os_name }}-{{ os_version }}-{{ arch }} -f -r {{ box_version}} parallels '{{ playbook_dir }}/{{ parallels_os_name }}.box'"
+      command: "vagrant cloud publish {{ vagrant_account_name }}/{{ os_name }}-{{ os_version }}-{{ arch }} -f -r {{ box_version}} parallels '{{ playbook_dir }}/{{ parallels_os_name }}.box'"
       when: publish_to_vagrant_cloud
     - name: Remove box file
       file:
