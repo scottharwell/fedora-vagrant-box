@@ -1,6 +1,6 @@
 ---
 arch: "aarch64"
-box_version: "1.0.2"
+box_version: "1.0.3"
 os_version: "35"
 os_name: "fedora"
 parallels_path: "/Users/scott/Parallels"
